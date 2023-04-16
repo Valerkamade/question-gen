@@ -7,10 +7,3 @@
   "nav main";
 }
 
-.content {
-  grid-area: main;
-  width: 1080px;
-  max-height: 861px;
-  background-color: #fff;
-  border-radius: 30px;
-}

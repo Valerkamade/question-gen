@@ -1,0 +1,7 @@
+@import url(./styles/main.css);
+@import url(./styles/__heading/main__heading.css);
+@import url(./styles/__title/main__title.css);
+@import url(./styles/__heading-icon/main__heading-icon.css);
+@import url(./styles/__content/main__content.css);
+@import url(./styles/__button/main__button.css);
+@import url(./styles/__button/_disabled/main__button_disabled.css);

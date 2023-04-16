@@ -1,0 +1,6 @@
+.main__heading {
+  width: 990px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}

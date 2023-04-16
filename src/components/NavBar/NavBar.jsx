@@ -1,5 +1,5 @@
 import React from 'react';
-import './Main.css';
+import './NavBar.css';
 import Navigation from '../Navigation/Navigation.jsx';
 import ButtonMenu from '../ButtonMenu/ButtonMenu';
 import { appMenuList, loginMenuList } from '../../data/navItems';
