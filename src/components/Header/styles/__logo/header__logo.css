@@ -1,0 +1,10 @@
+.header__logo {
+  min-width: 330px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 45px;
+
+  color: #5e5e5e;
+}

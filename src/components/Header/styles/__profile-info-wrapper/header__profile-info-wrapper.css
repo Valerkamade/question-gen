@@ -1,0 +1,5 @@
+.header__profile-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

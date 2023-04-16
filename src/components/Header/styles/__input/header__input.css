@@ -1,0 +1,20 @@
+.header__input {
+  width: 156px;
+  height: 64px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 15px 40px 5px #ededed;
+  padding-left: 65px;
+  background: url("../../images/search-icon.png") no-repeat;
+  background-position: left 27px center;
+  transition-duration: 1s;
+}
+
+.header__input:focus,
+.header__input:hover {
+  width: 350px;
+}
+
+.header__input::placeholder {
+  color: #5e5e5e;
+}

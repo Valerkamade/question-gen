@@ -1,0 +1,24 @@
+.nav {
+  grid-area: nav;
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.main__title {
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 120px;
+  justify-self: center;
+}
+
+.navItem {
+  margin-bottom: 47px;
+  padding-left: 50px;
+list-style: none;
+}
