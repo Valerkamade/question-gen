@@ -4,15 +4,16 @@ import { questions } from "../../../data/questions.js";
 import iconHTML from "./uiux/html5.svg";
 import iconCSS from "./uiux/css3.svg";
 import iconJS from "./uiux/js.svg";
+import { Fade } from "react-awesome-reveal";
 
 const Main = (props) => {
   const [icon, setIcon] = useState("");
-  const [timer, setTimer] = useState(0);
+  const [seconds, setSeconds] = useState(50);
+  const [timerActive, setTimerActive] = useState(true);
   const [questionData, setQuestionData] = useState({});
 
   const randomQuestion = () => {
     setQuestionData(questions[Math.floor(Math.random() * questions.length)]);
-    console.log(questionData.question)
   };
 
   useEffect(() => {
@@ -25,24 +26,63 @@ const Main = (props) => {
     if (questionData.type === "js") {
       setIcon(iconJS);
     }
-  }, [questionData])
+  }, [questionData]);
 
-  useEffect(() => randomQuestion(), [])
+  useEffect(() => randomQuestion(), []);
+
+  useEffect(() => {
+    if (seconds > 0 && timerActive) {
+      setTimeout(setSeconds, 100, seconds - 1);
+    } else {
+      setTimerActive(false);
+    }
+  }, [seconds, timerActive]);
+
+
 
   return (
     <main className="main">
       <div className="main__heading">
-        <div className="main__timer">Timer</div>
-        <h1 className="main__title">{props.title}</h1>
-        <img className="main__heading-icon" src={icon} alt={`Иконка вопроса с логотипом ${questionData.type}`} />
+        <Fade direction="right">
+          <div className="main__heading-timer">
+            <p className="main__heading-timer-span">
+              {seconds > 0 ? seconds / 10 : "Done!"}
+            </p>
+          </div>
+        </Fade>
+
+        <Fade>
+          <h1 className="main__title">{props.title}</h1>
+        </Fade>
+
+        <Fade direction="left" className="main__heading-icon"><img
+            className="main__heading-icon"
+            src={icon}
+            alt={`Иконка вопроса с логотипом ${questionData.type}`}
+          /></Fade>
+          
       </div>
 
-      <div className="main__content">
-        <p className="main__question-text">
-          {questionData.question}
-        </p>
-      </div>
-      <button className={`main__button ${timer > 0 ? 'main__button_disabled' : ''}`} type="button" onClick={randomQuestion}>Другой вопрос</button>
+      <Fade>
+        <div className="main__content">
+          <p className="main__content-question-text">{questionData.question}</p>
+        </div>
+      </Fade>
+
+      <Fade>
+        <button
+          className="main__button"
+          type="button"
+          onClick={() => {
+            setTimerActive(!timerActive);
+            randomQuestion();
+            setSeconds(50);
+          }}
+          disabled={seconds > 0 && true}
+        >
+          Другой вопрос
+        </button>
+      </Fade>
     </main>
   );
 };

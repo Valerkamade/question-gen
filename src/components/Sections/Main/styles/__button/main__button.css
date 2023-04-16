@@ -14,3 +14,7 @@
   line-height: 54px;
 }
 
+.main__button:disabled {
+  background-color: #c5c5c5;
+  cursor: none;
+}

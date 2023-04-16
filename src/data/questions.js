@@ -2,7 +2,7 @@ export const questions = [
   {
     type: "css",
     question:
-      "Расскажите себе о свойстве display: основные значения и как работают",
+      `Расскажите себе о свойстве display: основные значения и как работают`,
     answer:
       "У display несколько основных свойств: none, block, inline, inline-block, flex, grid",
     skillPoints: 1,

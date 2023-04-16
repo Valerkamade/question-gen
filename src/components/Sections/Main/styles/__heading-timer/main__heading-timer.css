@@ -1,0 +1,10 @@
+.main__heading-timer {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  padding-left: 64px;
+  min-width: 150px;
+  min-height: 64px;
+  background: url(../../uiux/timer-outline.svg) no-repeat;
+  background-size: 64px 64px;
+}
