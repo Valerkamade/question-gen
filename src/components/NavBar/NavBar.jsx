@@ -1,30 +1,31 @@
 import React from 'react';
-import './Main.css';
-import Navigation from '../Navigation/Navigation.jsx';
-import ButtonMenu from '../ButtonMenu/ButtonMenu';
-import { appMenuList, loginMenuList } from '../../data/navItems';
+import './NavBar.css';
+import Navigation from './Navigation/Navigation';
+import MenuButton from './MenuButton/MenuButton';
+import Logo from './Logo/Logo';
+import { appMenuList, loginMenuList, logoData } from '../../data/navItems';
 
 function NavBar() {
   return (
     <>
-      <h1 className='main__title'>Quiz Time</h1>
+      <Logo url={logoData.url} text={logoData.text} />
       <div className='nav'>
         <Navigation type='app'>
           {appMenuList.map((item, i) => (
-            <ButtonMenu
+            <MenuButton
               key={i}
               text={item.text}
-              style={{ backgroundImage: `url(${item.url})` }}
+              url={item.url}
             />
           ))}
         </Navigation>
         <Navigation type='login'>
           {loginMenuList.map((item, i) => (
             
-            <ButtonMenu
+            <MenuButton
               key={i}
               text={item.text}
-              style={{ backgroundImage: `url(${item.url})` }}
+              url={item.url}
             />
           ))}
         </Navigation>

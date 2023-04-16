@@ -26,3 +26,9 @@
   border-radius: 30px;
   margin: auto;
 }
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

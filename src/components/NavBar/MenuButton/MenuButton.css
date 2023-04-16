@@ -1,0 +1,10 @@
+/* .nav__button {
+ 
+    list-style-image: url('../Navigation/images/dashboard.svg');
+
+} */
+
+.item__button::before {
+content: '';
+
+}
